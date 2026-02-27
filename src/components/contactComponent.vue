@@ -4,7 +4,7 @@
       
       <!-- Titre -->
       <div class="text-center mb-16">
-        <h2 class="text-4xl font-extrabold text-gray-900">
+        <h2 class="text-4xl font-extrabold text-gray-900" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
           Contactez <span class="text-red-700">Nous</span>
         </h2>
         <p class="text-gray-600 mt-4">
@@ -15,7 +15,7 @@
       <div class="grid lg:grid-cols-2 gap-16">
 
         <!-- FORMULAIRE -->
-        <div class="bg-white p-10 rounded-2xl shadow-xl">
+        <div class="bg-white p-10 rounded-2xl shadow-xl" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
           <form @submit.prevent="submitForm" class="space-y-6">
 
             <div>
@@ -71,7 +71,7 @@
         <div class="space-y-8">
 
           <!-- Coordonnées -->
-          <div class="bg-white p-8 rounded-2xl shadow-xl space-y-6">
+          <div class="bg-white p-8 rounded-2xl shadow-xl space-y-6" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
             
             <div class="flex items-center gap-4">
               <div class="icon-box">
@@ -106,7 +106,7 @@
           </div>
 
           <!-- MAP -->
-          <div class="rounded-2xl overflow-hidden shadow-xl h-[300px]">
+          <div class="rounded-2xl overflow-hidden shadow-xl h-[300px]" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
             <iframe
               class="w-full h-full"
               loading="lazy"

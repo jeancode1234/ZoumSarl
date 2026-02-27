@@ -8,15 +8,15 @@
 
       <!-- Images -->
       <div class="grid md:grid-cols-3 gap-10 mb-16">
-        <div class="rounded-2xl overflow-hidden shadow-xl" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+        <div class="rounded-2xl overflow-hidden shadow-xl" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
           <img src="../assets/zoom/Image11.png" class="w-full h-64 object-cover" />
         </div>
 
-        <div class="rounded-2xl overflow-hidden shadow-xl" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+        <div class="rounded-2xl overflow-hidden shadow-xl" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
           <img src="../assets/zoom/Image12.png" class="w-full h-64 object-cover" />
         </div>
 
-        <div class="rounded-2xl overflow-hidden shadow-xl" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+        <div class="rounded-2xl overflow-hidden shadow-xl" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
           <img src="../assets/zoom/Image13.png" class="w-full h-64 object-cover" />
         </div>
       </div>

@@ -60,7 +60,6 @@
           <h3 class="font-semibold mb-4">Liens rapides</h3>
           <ul class="space-y-2 text-gray-400 text-sm">
             <li><router-link to="/" class="hover:text-white transition">Accueil</router-link></li>
-            <li><a href="#partenaires" class="hover:text-white transition">Partenaires</a></li>
             <li><a href="#about" class="hover:text-white transition">À propos</a></li>
             <li><a href="#vision" class="hover:text-white transition">Vision</a></li>
             <li><a href="#services" class="hover:text-white transition">Services</a></li>
@@ -97,10 +96,8 @@
     <!-- WHATSAPP FLOAT -->
     <a href="https://wa.me/237675134037"
        target="_blank"
-       class="fixed bottom-6 left-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition transform hover:scale-110 z-50">
-      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 .01 5.37 0 12c0 2.12.55 4.18 1.6 6.02L0 24l6.18-1.6A11.95 11.95 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.2-3.48-8.52z"/>
-      </svg>
+       class="fixed bottom-6 left-6 bg-white p-4 rounded-full shadow-lg transition transform hover:scale-110 z-50">
+      <img src="../assets/zoom/icon/what.png" alt="whatsapp" class="w-8 h-8">
     </a>
 
     <!-- SCROLL TOP -->

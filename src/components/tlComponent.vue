@@ -13,11 +13,11 @@
     <div class="relative max-w-6xl mx-auto px-6 text-center text-white">
 
       <!-- Title -->
-      <h2 class="inline-block bg-red-700 px-10 py-4 rounded-xl text-4xl md:text-5xl font-extrabold shadow-xl">
+      <h2 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" class="inline-block bg-red-700 px-10 py-4 rounded-xl text-4xl md:text-5xl font-extrabold shadow-xl">
         Technologie & Performance
       </h2>
 
-      <p class="mt-6 text-lg text-gray-200 max-w-3xl mx-auto">
+      <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="mt-6 text-lg text-gray-200 max-w-3xl mx-auto">
         L'innovation est au cœur de notre stratégie logistique.
         Nous combinons technologie avancée et excellence opérationnelle
         pour garantir fiabilité, rapidité et sécurité.
@@ -27,7 +27,7 @@
       <div class="mt-16 grid md:grid-cols-2 gap-10 text-left">
 
         <!-- Card 1 -->
-        <div class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-xl hover:scale-105 transition duration-500">
+        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-xl hover:scale-105 transition duration-500">
           <h3 class="text-2xl font-bold text-red-400 mb-4">
             Innovation Digitale
           </h3>
@@ -39,7 +39,7 @@
         </div>
 
         <!-- Card 2 -->
-        <div class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-xl hover:scale-105 transition duration-500">
+        <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000" class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-xl hover:scale-105 transition duration-500">
           <h3 class="text-2xl font-bold text-red-400 mb-4">
             Maîtrise & Sécurité
           </h3>

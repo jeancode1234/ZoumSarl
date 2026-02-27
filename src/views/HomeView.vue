@@ -1,16 +1,16 @@
 <template>
     <div>
+        <section id="home">
         <BannerComponent />
-        <section id="partenaires" class=" py-8 lg:py-24">
-            <div class="w-full">
-                <h1 class="text-4xl uppercase font-roboto text-red-800 font-bold text-center" data-aos="fade-up"
-                    data-aos-delay="200" data-aos-duration="1000">Nos partenaires</h1>
-            </div>
-            <SlideComponent />
         </section>
         <section id="about">
 
             <aboutComponent />
+            <div class="w-full py-8">
+                <h1 class="text-4xl uppercase font-roboto text-red-800 font-bold text-center" data-aos="fade-up"
+                    data-aos-delay="200" data-aos-duration="1000">Nos partenaires</h1>
+            </div>
+            <SlideComponent />
         </section>
         <section id="vision">
             <visionComponent />

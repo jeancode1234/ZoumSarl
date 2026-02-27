@@ -1,70 +1,73 @@
 <template>
   <div>
-    <header
-      class="fixed top-0 left-0 w-full bg-white shadow-md z-50 transition-all duration-300"
-    >
+    <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50 transition-all duration-300">
       <div class="max-w-7xl mx-auto px-6">
         <div class="flex justify-between items-center h-20">
-          
+
           <!-- Logo -->
-          <router-link
-            to="/"
-            class="text-3xl font-bold uppercase tracking-wide"
-          >
+          <router-link to="/" class="text-3xl font-bold uppercase tracking-wide">
             <span class="text-red-800">Zoum</span>
             <span class="text-black text-xl">Sarl</span>
           </router-link>
 
           <!-- Desktop Menu -->
           <nav class="hidden md:flex items-center gap-8 text-lg">
-            <router-link to="/" class="nav-link">Accueil</router-link>
-            <a href="#partenaires" class="nav-link">Partenaires</a>
-            <a href="#about" class="nav-link">Apropos</a>
-            <a href="#vision" class="nav-link">Vision</a>
-            <a href="#services" class="nav-link">Services</a>
-            <a href="#engagement" class="nav-link">Engagement</a>
-            <a href="#contact" class="nav-link">Contact</a>
+
+            <!-- Accueil -->
+            <a href="#home" :class="['nav-link', { 'active-link': activeSection === 'home' }]">
+              Accueil
+            </a>
+            <a href="#about" :class="['nav-link', { 'active-link': activeSection === 'about' }]">
+              Apropos
+            </a>
+            <!-- Sections -->
+
+            <a href="#vision" :class="['nav-link', { 'active-link': activeSection === 'vision' }]">
+              Vision
+            </a>
+
+            <a href="#services" :class="['nav-link', { 'active-link': activeSection === 'services' }]">
+              Services
+            </a>
+
+            <a href="#engagement" :class="['nav-link', { 'active-link': activeSection === 'engagement' }]">
+              Engagement
+            </a>
+
+            <a href="#contact" :class="['nav-link', { 'active-link': activeSection === 'contact' }]">
+              Contact
+            </a>
+
           </nav>
 
           <!-- Mobile Button -->
-          <button
-            @click="toggleMenu"
-            class="md:hidden focus:outline-none"
-          >
+          <button @click="toggleMenu" class="md:hidden focus:outline-none">
             <div class="space-y-2">
-              <span
-                class="block w-6 h-0.5 bg-black transition"
-                :class="{ 'rotate-45 translate-y-2': isOpen }"
-              ></span>
-              <span
-                class="block w-6 h-0.5 bg-black transition"
-                :class="{ 'opacity-0': isOpen }"
-              ></span>
-              <span
-                class="block w-6 h-0.5 bg-black transition"
-                :class="{ '-rotate-45 -translate-y-2': isOpen }"
-              ></span>
+              <span class="block w-6 h-0.5 bg-black transition" :class="{ 'rotate-45 translate-y-2': isOpen }"></span>
+              <span class="block w-6 h-0.5 bg-black transition" :class="{ 'opacity-0': isOpen }"></span>
+              <span class="block w-6 h-0.5 bg-black transition" :class="{ '-rotate-45 -translate-y-2': isOpen }"></span>
             </div>
           </button>
+
         </div>
       </div>
 
       <!-- Mobile Menu -->
-      <div
-        v-if="isOpen"
-        class="md:hidden bg-white shadow-lg px-6 pb-6 space-y-4 animate-slideDown"
-      >
-        <router-link @click="closeMenu" to="/" class="mobile-link">Accueil</router-link>
-        <a href="#partenaires" @click="closeMenu" class="mobile-link">Partenaires</a>
+      <div v-if="isOpen" class="md:hidden bg-white shadow-lg px-6 pb-6 space-y-4 animate-slideDown">
+        <router-link @click="closeMenu" to="/" class="mobile-link">
+          Accueil
+        </router-link>
+
         <a href="#about" @click="closeMenu" class="mobile-link">Apropos</a>
         <a href="#vision" @click="closeMenu" class="mobile-link">Vision</a>
         <a href="#services" @click="closeMenu" class="mobile-link">Services</a>
         <a href="#engagement" @click="closeMenu" class="mobile-link">Engagement</a>
         <a href="#contact" @click="closeMenu" class="mobile-link">Contact</a>
       </div>
+
     </header>
 
-    <!-- Spacer pour éviter que le contenu passe sous la navbar -->
+    <!-- Spacer -->
     <div class="h-20"></div>
 
     <router-view name="one" />
@@ -76,14 +79,46 @@ export default {
   data() {
     return {
       isOpen: false,
+      activeSection: "",
     };
   },
+
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+
+  beforeUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+
   methods: {
     toggleMenu() {
       this.isOpen = !this.isOpen;
     },
+
     closeMenu() {
       this.isOpen = false;
+    },
+
+    handleScroll() {
+      const sections = [
+        "home",
+        "about",
+        "vision",
+        "services",
+        "engagement",
+        "contact",
+      ];
+
+      sections.forEach((id) => {
+        const section = document.getElementById(id);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 150 && rect.bottom >= 150) {
+            this.activeSection = id;
+          }
+        }
+      });
     },
   },
 };
@@ -91,7 +126,7 @@ export default {
 
 <style scoped>
 .nav-link {
-  @apply relative text-gray-700 font-medium transition duration-300;
+  @apply relative text-gray-700 font-medium transition duration-300 px-1 cursor-pointer;
 }
 
 .nav-link::after {
@@ -103,8 +138,12 @@ export default {
   @apply w-full;
 }
 
-.router-link-active {
+.active-link {
   @apply text-red-800;
+}
+
+.active-link::after {
+  @apply w-full;
 }
 
 .mobile-link {
@@ -116,6 +155,7 @@ export default {
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

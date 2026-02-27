@@ -7,9 +7,9 @@
         <!-- IMAGE -->
         <div class="relative">
           <!-- Fond décoratif -->
-          <div class="absolute -top-6 -left-6 w-full h-full bg-red-700 rounded-2xl hidden lg:block"></div>
+          <div class="absolute -top-6 -left-6 w-full h-full bg-red-700 rounded-2xl hidden lg:block" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000"></div>
 
-          <div class="relative rounded-2xl overflow-hidden shadow-2xl" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
             <img
               src="../assets/zoom/Image10.png"
               alt="Vision logistique"

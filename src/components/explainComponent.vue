@@ -8,7 +8,7 @@
             </p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div v-for="step in steps" :key="step.id" class="bg-red-800 rounded-3xl shadow-md p-6 space-y-8"
-                    data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
                     <p class="text-white font-extrabold mb-4 text-4xl">{{ step.number }}.</p>
                     <h2 class="text-2xl font-bold mb-2 text-white">{{ step.title }}</h2>
                     <p class="text-gray-300">{{ step.description }}</p>
