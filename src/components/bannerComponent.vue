@@ -18,9 +18,9 @@
                 à vos besoins professionnels.
             </p>
 
-            <button class="mt-10 bg-red-700 hover:bg-red-800 transition px-8 py-3 rounded-lg shadow-lg">
+            <a href="#contact" class="mt-10 bg-red-700 hover:bg-red-800 transition px-8 py-3 rounded-lg shadow-lg">
                 Demander un devis
-            </button>
+            </a>
         </div>
 
     </section>

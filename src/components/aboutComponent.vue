@@ -27,17 +27,17 @@
 
           <!-- Boutons -->
           <div class="mt-10 flex gap-6">
-            <button
+            <a href="#contact"
               class="bg-red-700 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-red-800 transition duration-300"
             >
               Demander un devis
-            </button>
+            </a>
 
-            <button
+            <a href="#services"
               class="border border-gray-400 px-8 py-3 rounded-lg hover:bg-gray-100 transition duration-300"
             >
               Nos services
-            </button>
+            </a>
           </div>
         </div>
 
