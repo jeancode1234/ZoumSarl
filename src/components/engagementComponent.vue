@@ -2,7 +2,7 @@
     <div>
         <div class="p-8 bg-red-600">
         <h1 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="text-4xl font-bold text-center text-white mb-8">NOS ENGAGEMENTS CLÉS</h1>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 w-5/6 mx-auto">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 w-5/6 mx-auto">
             <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" v-for="engagement in engagements" :key="engagement.id" class="bg-white rounded-3xl shadow-md p-14 text-center">
                 <img :src="engagement.icon" alt="Icône" class="mx-auto mb-4 w-16 h-16">
                 <h2 class="text-lg font-semibold">{{ engagement.title }}</h2>

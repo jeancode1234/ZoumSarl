@@ -1,9 +1,9 @@
 <template>
     <section class="relative bg-gray-100 py-24 overflow-hidden">
-        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-center text-gray-900" data-aos="fade-up"
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-center text-gray-900 z-20 absolute left-10 md:left-0 md:right-0" data-aos="fade-up"
             data-aos-delay="200" data-aos-duration="1000">
             Notre Sélection
-            <span class="text-red-700">Exclusive.</span>
+            <span class="text-white md:text-red-700 z-20">Exclusive.</span>
         </h2>
         <div class="w-full h-16"></div>
         <!-- Forme rouge décorative -->
